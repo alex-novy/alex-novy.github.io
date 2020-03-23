@@ -10,6 +10,7 @@ $(function() {
             $('#kava_operator').html(data.result.operator_address);
             $('#kava_tokens').html(data.result.tokens.slice(0,-6));
             $('#kava_moniker').html(data.result.description.moniker);
+            $('#kava_comission').html(data.result.commission.commission_rates.rate.slice(2,-16));
         });
     }
     setInterval(update, 7000);
