@@ -11,7 +11,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<script src="https://use.fontawesome.com/384f4c404b.js"></script>
 	</head>
 	<body class="is-preload">
 
@@ -21,7 +20,7 @@
 				<!-- Header -->
 					<header id="header">
 						<div class="logo">
-							<span class="icon fas fa-coins"></span>
+							<span class="icon fa-fort-awesome"></span>
 						</div>
 						<div class="content">
 							<div class="inner">
@@ -49,15 +48,23 @@
 								<h2 class="major">KAVA</h2>
 								<span class="image main"><img src="images/kava.jpg" alt="" /></span>
 								<p>Kava is a cross-chain DeFi platform offering collateralized loans and stablecoins to users of major crypto assets, including BTC, XRP, BNB, ATOM, etc. Users can collateralize their crypto assets in exchange of USDX, Kava's stablecoin. KAVA is the governance and staking token responsible for securing the network and voting on key parameters. <a href="#kava">kava.io</a>.</p>
-								<p><h4>Blockchain Stats:</h4></p>
+								<br>
+								<table class="alt3">
+									<thead>
+										<tr>
+											<th><h3>Blockchain Stats</h3></th>
+											<th><div class="align-right"><a href="https://kava.bigdipper.live/validator/kavavaloper1k760ypy9tzhp6l2rmg06sq4n74z0d3rejwwaa0" target="_blank">Blockchain Explorer</a></div></th>
+										</tr>
+									</thead>
+								</table>
 								<table class="alt2">
 									<thead>
 										<tr>
-											<th>Block Height</th>
-											<th>Moniker</th>
-											<th>KAVA Delegated</th>
-											<th>Commision %</th>
-											<th>Token Price $</th>
+											<th><div class="align-center">Block Height</div></th>
+											<th><div class="align-center">Moniker</div></th>
+											<th><div class="align-center">KAVA Delegated</div></th>
+											<th><div class="align-center">Commision %</div></th>
+											<th><div class="align-center">Token Price $</div></th>
 										</tr>
 									</thead>
 									<tbody>
@@ -70,8 +77,50 @@
 										</tr>
 									</tbody>
 								</table>
-								<p><h4>Staking Calculator</h4></p>
-								
+								<p></p>
+								<br>
+								<table class="alt3">
+									<thead>
+										<tr>
+											<th><h3>Staking Calculator</h3></th>
+											<th><div class="align-right">Average Yield 7%-8%</div></th>
+										</tr>
+									</thead>
+								</table>
+								<form method="post">
+									<div class="fields">
+										<div class="field half">
+											<label for="amount">Amount</label>
+											<input type="text" name="amount" id="kava_amount_calc" value="1000"/>
+										</div>
+										<div class="field half">
+											<label for="comission">Comission</label>
+											<input type="text" name=comission id="kava_comission_calc" value="10" />
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="button" onClick="multiplyBy()" Value="Calculate" class="primary"/></li>
+									</ul>
+								</form>
+								<table class="alt2">
+									<thead>
+										<tr>
+											<th><div class="align-center">Daily Reward</div></th>
+											<th><div class="align-center">Monthly Reward</div></th>
+											<th><div class="align-center">Yearly Reward</div></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><span id="kava_daily"></span></td>
+											<td><span id="kava_monthly"></span></td>
+											<td><span id="kava_yearly"></span></td>
+										</tr>
+									</tbody>
+								</table>
+								<span id="result_daily"></span>
+								<span id="result_monthly"></span>
+								<span id="result_yearly"></span>
 								<p><b>operator address: kavavaloper1k760ypy9tzhp6l2rmg06sq4n74z0d3rejwwaa0</b></p>
 								<p><h4>Delegate</h4></p>
 								<table class="alt3">
@@ -84,7 +133,7 @@
 													<li><a href="https://itunes.apple.com/kr/app/cosmostation/id1459830339?mt=8" class="icon fa-apple" target="_blank"><span class="label">App Store</span></a> iPhone</li>
 												</ul>
 											</th>
-											<th><a href="https://kava.bigdipper.live/validator/kavavaloper1k760ypy9tzhp6l2rmg06sq4n74z0d3rejwwaa0" target="_blank">Blockchain Explorer</a></th>
+											<th></th>
 										</tr>
 									</thead>
 									<tbody>
@@ -400,6 +449,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/kava.js"></script>
 			<script src="assets/js/kava_price.js"></script>
 			<script src="assets/js/kava_calc.js"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 	</body>
 </html>
