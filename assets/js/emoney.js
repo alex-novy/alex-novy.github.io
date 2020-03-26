@@ -16,7 +16,7 @@ function emultiplyBy()
 
 $(function() {
         function update() {
-            fetch('http://emoney.validator.network/light/staking/validators/emoneyvaloper1q2kc675fw536jq74f6ekwae2pr5pksued2k80s')
+            fetch('https://emoney.validator.network/light/staking/validators/emoneyvaloper1q2kc675fw536jq74f6ekwae2pr5pksued2k80s')
             .then(res => {
                 return res.json();
             })
